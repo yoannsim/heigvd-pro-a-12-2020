@@ -42,7 +42,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // application level middleware
-app.use(jwtHelper.authenticateJWT);
+//app.use(jwtHelper.authenticateJWT);
 
 
 var routes_course = require('./api/routes/courseRoutes'); //importing route
