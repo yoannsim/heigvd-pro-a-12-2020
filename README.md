@@ -1,71 +1,43 @@
-# Outils de participation en cours
+# Corogram
 
-Un système de cours participatif qui permet à une classe de chatter ensemble pour réagir au cours, puis de sélectionner des questions réponses pertinentes dans un forum, et enfin de partager des fichiers.   
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
-HEIG-VD  |  Dépt. TIC  |  Cours PRO  |  Année académique 2019/20 | groupe A-12
 
-Équipe de développement:
 
-| Name                                 | Email                              | Github       |
-|--------------------------------------|------------------------------------|--------------|
-| Claude-André Alves                   | claude-andre.inacioalves@heig-vd.ch| ClaudeAlves  |
-| Robin Cuénoud                        | robin.cuenoud@heig-vd.ch           | robincuenoud |
-| Maxime Dupont (deputy project lead)  | maxime.dupont@heig-vd.ch           | MaximeADupont|
-| Florian Mülhauser (project lead)     | florian.mulhauser@heig-vd.ch       | FlorianMulhauser & Florian |
-| Yoann Simonet  | yoann.simonet@heig-vd.ch    | yoannsim   |
+## Pour la communication avec le backend dans les différents services 
 
-## Dépendances
+Suivre ce tuto : https://angular.io/guide/http
 
-Le logiciel à préalablement besoin de ces dépendances là, les autres seront automatiquement installés ultérieurement avec un `npm install`.
+## Pour run Corogram : 
 
-* NodeJs 12.16.3
-* npm 6.14.4
-* Angular CLI 9.1.7 (normalement minimum 9.0.6 c'est bon)
-* Typescript 3.1
+`ng serve --proxy-config proxy.conf.json` 
 
-## Téléchargements et installations
-Dans un cas final ou le produit serait utilisé par plusieurs personnes, il serait hébergé sur un serveur et il faudrait juste se connecter à la webapp en saississant le bon URL sur votre navigateur et en s'identifiant. On a pensé que ça ne servait à rien de se concentrer là dessus pour notre projet, nous allons donc vous montrer comment l'installer et le faire tourner en local. Ce sera donc la même démarche que pour une équipe qui reprendrait le développement de cette application.
+Ce fichier `proxy.conf.json` permet de rediriger les requetes vers `/api/` vers `localhost:3000`  ou le serveur node tourne. Ainsi si on déploie vraiment on peut adapter cela vers une “vraie” addresse.
 
-### 1. Télécharger les dépendances principales requises
+## Development server
 
-* Node: il faut donc télécharger et installer `npm` (https://nodejs.org/en/download/) version min 12.16.3 ou +
-* Typescript: ouvrir un shell et taper `npm install -g typescript` (le `-g` est pour une installation globale)
-* Typescript compiler: `npm install -g typescript-compiler`
-* angular-cli: `npm install -g angular-cli`
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-### 2. Télécharger le logicielle et installation automatique de ces dépendances
+## Code scaffolding
 
-* Git clone ce projet, ou télécharger la dernière release disponible sur ce git.
-* Dans `heigvd-pro-a-12-2020/backend`, lancer un shell et taper `npm install`
-* Dans `heigvd-pro-a-12-2020/corogram`, lancer un shell et taper `npm install` 
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Exécution
+## Build
 
-### A) Marche a suivre
-* Dans `heigvd-pro-a-12-2020/corogram`, ouvrir un shell et lancer la commande : `ng serve --proxy-config proxy.conf.json` 
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-(sans le fichier proxy les requêtes ne sont pas fait au backend)
+## Running unit tests
 
-* Dans `heigvd-pro-a-12-2020/backend`, ouvrir un shell et lancer la commande: `npm start` 
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-* Ensuite avec votre navigateur aller sur `http://localhost:4200/` 
+## Running end-to-end tests
 
-#### B) Infos de connexions dev
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-* login: testUser, password: admin
-* login: admin, password: admin
+## Further help
 
-#### C) Références utiles pour le lancement d'angular 
-En cas de besoin, plus d'explications pour lancer l'environement, notament pour mettre en place un IDE, sont disponible avec ce lien.
-* https://developer.ibm.com/recipes/tutorials/angular-2-set-up-and-other-quick-debugging-tips/
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-#### D) Erreur potentielles au lancement et solutions
 
-En cas d'erreur en rentrant des commandes avec npm/ng au point A), certaines rencontrées sont répertoriées, voir fichier: rapports/guide_installation.md
-
-## Documentation
-
-Guide d'utilisateur: voir fichier `rapports/manuel_utilisateur.md`
-
-API documentation: voir fichier `rapports/conception_technique.md`
-
+## Erreur connues 
+* ng serve give this error : "Cannot find module '@angular-devkit/build-angular/package.json" -> https://stackoverflow.com/questions/50333003/could-not-find-module-angular-devkit-build-angular
