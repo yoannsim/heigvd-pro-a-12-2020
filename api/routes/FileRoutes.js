@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(app) {
-    var file = require('../controllers/fileController.js');
+    var file = require('../controllers/FileController.js');
 
 
 
