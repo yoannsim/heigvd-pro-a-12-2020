@@ -21,6 +21,12 @@ mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
 
 
+// Create link to Angular build directory
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
+
+
+
 const uri = config.url_db;
 const connectDB = async () => {
   await mongoose.connect(uri, {
