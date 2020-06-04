@@ -7,8 +7,8 @@
 
     <div class="nav-inner">
 
-      <a *ngIf="statu" href="/management"> Gestion des cours </a>
-      <a *ngIf="statu" href="/user-management"> Gestion des users </a>
+      <a *ngIf="statu" (click)="Gcours()" > Gestion des cours </a>
+      <a *ngIf="statu" (click)="Guser()"> Gestion des users </a>
       <app-courses (selectedCourseChanged)="selectCourse($event)"></app-courses>
 
     </div>
